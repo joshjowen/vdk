@@ -1,8 +1,8 @@
 package mse
 
 import (
-	"github.com/deepch/vdk/av"
-	"github.com/deepch/vdk/format/mp4f"
+	"github.com/joshjowen/vdk/av"
+	"github.com/joshjowen/vdk/format/mp4f"
 	"github.com/gobwas/ws"
 	"github.com/gobwas/ws/wsutil"
 	"net"

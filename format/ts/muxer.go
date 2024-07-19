@@ -2,14 +2,14 @@ package ts
 
 import (
 	"fmt"
-	"github.com/deepch/vdk/codec/h265parser"
+	"github.com/joshjowen/vdk/codec/h265parser"
 	"io"
 	"time"
 
-	"github.com/deepch/vdk/av"
-	"github.com/deepch/vdk/codec/aacparser"
-	"github.com/deepch/vdk/codec/h264parser"
-	"github.com/deepch/vdk/format/ts/tsio"
+	"github.com/joshjowen/vdk/av"
+	"github.com/joshjowen/vdk/codec/aacparser"
+	"github.com/joshjowen/vdk/codec/h264parser"
+	"github.com/joshjowen/vdk/format/ts/tsio"
 )
 
 var CodecTypes = []av.CodecType{av.H264, av.H265, av.AAC}

@@ -7,9 +7,9 @@ import (
 	"log"
 	"time"
 
-	"github.com/deepch/vdk/codec/h264parser"
+	"github.com/joshjowen/vdk/codec/h264parser"
 
-	"github.com/deepch/vdk/av"
+	"github.com/joshjowen/vdk/av"
 	"github.com/pion/interceptor"
 	"github.com/pion/webrtc/v3"
 	"github.com/pion/webrtc/v3/pkg/media"
@@ -65,10 +65,10 @@ func (element *Muxer) NewPeerConnection(configuration webrtc.Configuration) (*we
 			Credential:     element.Options.ICECredential,
 			CredentialType: webrtc.ICECredentialTypePassword,
 		})
-	} else {
-		configuration.ICEServers = append(configuration.ICEServers, webrtc.ICEServer{
-			URLs: []string{"stun:stun.l.google.com:19302"},
-		})
+		// } else {
+		// 	configuration.ICEServers = append(configuration.ICEServers, webrtc.ICEServer{
+		// 		URLs: []string{"stun:stun.l.google.com:19302"},
+		// 	})
 	}
 	m := &webrtc.MediaEngine{}
 	if err := m.RegisterDefaultCodecs(); err != nil {
